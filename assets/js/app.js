@@ -1,4 +1,4 @@
-var API_KEY = "6841e5450643e5d4ff59981dbf58944e";
+var API_KEY = "3bca0faed4fa4eda3727e78ed6eca091";
 
 // -- On load --
 $(document).ready(function() {
@@ -17,7 +17,7 @@ $(document).ready(function() {
     }
     // Get and display current date
     date = moment();
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 5; i++) {
         // Display date
         day = $("#meteo-day-" + (i + 1));
         day.find(".name").text(date.format("dddd"));
@@ -117,7 +117,7 @@ function getMeteoByCoordinates(lat, lon, callback) {
 
 function displaySunriseSunset(lat, long) {
     date = moment();
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 5; i++) {
         // Get sunrise and sunset
         var times = SunCalc.getTimes(date, lat, long);
         var sunrise = pad(times.sunrise.getHours(), 2) + ':' + pad(times.sunrise.getMinutes(), 2);
@@ -138,7 +138,7 @@ function displayMeteo(data) {
     $('#meteo-title span').html('Weather in <a href="' + googleMapCity + '" class="text-muted meteo-city" target="_blank">' + data.city.name + ', ' + data.city.country + '</a>');
     // Update meteo for each day
     var tempMoyenne = 0;
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 5; i++) {
         // Get meteo
         meteo = data.list[i * 8];
         // Get DOM elements
