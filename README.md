@@ -1,3 +1,3 @@
 # WeatherApp
 
-A 3 Day Weather Forecasting Web App built using OPEN WEATHER API
+A 7 Day Weather Forecasting Web App built using OPEN WEATHER API
